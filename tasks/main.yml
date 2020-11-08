@@ -1,4 +1,5 @@
 - name: Install Visual Studio Code
+  become: yes
   snap:
     name: code
     classic: yes
