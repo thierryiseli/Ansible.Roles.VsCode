@@ -1,0 +1,6 @@
+  tasks:
+  - name: Install Visual Studio Code
+    snap:
+      name: code
+      classic: yes
+      state: present
