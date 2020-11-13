@@ -1,6 +1,6 @@
 - name: Install required system packages
   apt: 
-    name: {{ item }}
+    name: "{{ item }}"
     update_cache: no
     state: latest 
   loop: [ 'apt-transport-https', 'ca-certificates', 'software-properties-common']
