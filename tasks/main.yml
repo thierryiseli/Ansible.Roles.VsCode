@@ -4,19 +4,23 @@
     update_cache: no
     state: latest 
   loop: [ 'apt-transport-https', 'ca-certificates', 'software-properties-common']
+  become: yes
 
 - name: Add Microsoft GPG apt key
   apt_key:
     url: https://packages.microsoft.com/keys/microsoft.asc
     state: present
+  become: yes
 
 - name: Add VSCode Repository
   apt_repository:
     repo: deb https://packages.microsoft.com/repos/vscode stable main
     state: present
+  become: yes
 
 - name: Update apt and install VSCode 
   apt: 
     update_cache: yes 
     name: code 
     state: latest
+  become: yes
