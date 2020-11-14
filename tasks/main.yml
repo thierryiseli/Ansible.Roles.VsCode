@@ -14,7 +14,7 @@
 
 - name: Add VSCode Repository
   apt_repository:
-    repo: deb https://packages.microsoft.com/repos/vscode stable main
+    repo: deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
     state: present
   become: yes
 
